@@ -1,1 +1,34 @@
+.top {
+  width: 100%;
+  top: 0;
+  display: block;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  list-style: none;
+  align-items: center;
+  float: right;
+}
 
+.navbar li {
+  position: relative;
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  font-size: larger;
+}
+
+.main {
+  display: inline-flex;
+}
