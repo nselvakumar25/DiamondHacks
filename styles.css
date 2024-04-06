@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-color: rgb(0, 0, 0);
+  color: beige;
 }
 
 .container {
@@ -8,7 +10,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 50px 1fr 1fr 100px;
-  padding: 10px;
+  padding: 100px;
   box-sizing: border-box;
 }
 
@@ -47,6 +49,7 @@ body {
   text-align: center;
   padding: 14px;
   text-decoration: none;
+  color: beige;
 }
 .navbar li a:hover {
   font-size: larger;
@@ -56,10 +59,33 @@ body {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
-  grid-column-end: 4;
+  grid-column-end: 3;
+  float: center;
 }
 .home-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: 1000px;
+  float: center;
+  padding: 30px;
+}
+.home-buttons {
+  grid-column-start: 1;
+}
+.get-started {
+  padding: 14px 30px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  color: beige;
+  margin-right: 25px;
+}
+.watch-button {
+  padding: 14px 30px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  color: beige;
 }
