@@ -32,10 +32,8 @@
         </p>
         <p>Select your location how to get started:</p>
         <div class="dropdown">
-          <!-- Dropdown for selecting state -->
           <label for="state">Select your state:</label>
           <select id="state">
-            <!-- Add all the state options here -->
             <option value=""></option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -89,11 +87,9 @@
             <option value="WY">Wyoming</option>
           </select>
 
-          <!-- Dropdown for selecting county, initially empty -->
           <label for="county">and Select your county:</label>
-          <select id="county">
-            <!-- Options will be populated based on state selection -->
-          </select>
+          <select id="county"></select>
+          <button id="selectButton">Enter</button>
 
           <script>
             document
@@ -102,12 +98,7 @@
                 const stateCode = this.value;
                 console.log(stateCode);
                 const countyDropdown = document.getElementById("county");
-
-                // Clear existing options
                 countyDropdown.innerHTML = "";
-
-                // Replace 'YOUR_RAPIDAPI_KEY' and 'YOUR_RAPIDAPI_HOST' with your actual key and host values
-                // Replace 'ENDPOINT_URL' with the actual endpoint URL
                 fetch(`https://us-counties.p.rapidapi.com/basic/${stateCode}`, {
                   method: "GET",
                   headers: {
@@ -118,8 +109,6 @@
                 })
                   .then((response) => response.json())
                   .then((data) => {
-                    // Assuming the API returns an array of county objects
-                    // Replace 'county.id' and 'county.name' with the actual property names from your API response
                     data.forEach((county) => {
                       const option = document.createElement("option");
                       option.value = county.name;
@@ -130,6 +119,14 @@
                   .catch((error) =>
                     console.error("Failed to fetch counties:", error)
                   );
+              });
+
+            document
+              .getElementById("selectButton")
+              .addEventListener("click", function () {
+                var selectElement = document.getElementById("state");
+                var selectedState = selectElement.value;
+                console.log("Selected state:", selectedState);
               });
           </script>
         </div>
