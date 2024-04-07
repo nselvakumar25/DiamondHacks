@@ -1,9 +1,9 @@
 # Diamondhacks 2024: Pirate Polls 🏴‍☠️
 
 Stella Kim `@stellacse8a`
-Adrianne Nguyen `@_kuromi48`
+Adrianne Nguyen `@adriannebnguyen`
 Nishitha Selvakumar `@nselvakumar25`
-Vanessa Tello `@an5248`
+Vanessa Tello `@vtello33`
 
 ## About
 
