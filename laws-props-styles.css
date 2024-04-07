@@ -18,6 +18,10 @@ body {
   grid-column-start: 1;
   grid-column-end: 2;
 }
+.header a {
+  text-decoration: none;
+  color: rgb(235, 211, 161);
+}
 
 .main {
   grid-row-start: 2;
@@ -65,4 +69,5 @@ body {
 }
 .navbar li a:hover {
   font-size: larger;
+  color: rgb(192, 164, 105);
 }
