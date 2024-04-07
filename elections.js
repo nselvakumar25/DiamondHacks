@@ -42,3 +42,23 @@ const Elections = () => {
 };
 
 export default Elections;
+
+// src/App.js
+
+import React from 'react';
+import Elections from './components/Elections';
+
+function App() {
+  return (
+    <div className="App">
+      <Elections />
+    </div>
+  );
+}
+
+export default App;
+
+"proxy": "http://localhost:5000",
+
+npm start
+
