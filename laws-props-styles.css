@@ -73,3 +73,17 @@ body {
   font-size: larger;
   color: rgb(192, 164, 105);
 }
+
+.laws-props-image {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-column-end: 3;
+  float: center;
+}
+.laws-props-image img {
+  max-width: 100%;
+  height: auto;
+  float: center;
+  padding: 30px;
+}

@@ -70,3 +70,11 @@ body {
   font-size: larger;
   color: rgb(192, 164, 105);
 }
+
+.register-video video {
+  padding-right: 20px;
+  padding-top: 30px;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
