@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: rgb(0, 0, 0);
-  color: beige;
+  color: rgb(235, 211, 161);
 }
 
 .container {
@@ -22,9 +22,17 @@ body {
 .main {
   grid-row-start: 2;
   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-bottom: 25px;
 }
 .main h3 {
-  font-size: xx-large;
+  font-size: 40pt;
+  margin-top: 140px;
+}
+.main p {
+  font-size: 18pt;
+  margin-bottom: 50px;
 }
 
 .navbar {
@@ -49,7 +57,8 @@ body {
   text-align: center;
   padding: 14px;
   text-decoration: none;
-  color: beige;
+  color: rgb(235, 211, 161);
+  font-size: 15pt;
 }
 .navbar li a:hover {
   font-size: larger;
@@ -69,16 +78,13 @@ body {
   float: center;
   padding: 30px;
 }
-.home-buttons {
-  grid-column-start: 1;
-}
-.get-started {
+.are-you-registered {
   padding: 14px 30px;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
-  color: beige;
+  color: rgb(235, 211, 161);
   margin-right: 25px;
 }
 .watch-button {
@@ -87,5 +93,67 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
-  color: beige;
+  color: rgb(235, 211, 161);
+}
+
+.link-boxes {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  display: flex;
+  justify-content: space-around;
+}
+.link-boxes a {
+  text-decoration: none;
+  color: rgb(235, 211, 161);
+}
+
+.your-govt {
+  padding: 75px 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 18pt;
+  box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
+}
+
+.laws-props {
+  padding: 75px 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 18pt;
+  box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
+}
+.register {
+  padding: 75px 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 18pt;
+  box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
+}
+.where-when {
+  padding: 75px 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 18pt;
+  box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
 }
