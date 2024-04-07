@@ -53,7 +53,6 @@ body {
 }
 .navbar li a {
   display: block;
-  color: black;
   text-align: center;
   padding: 14px;
   text-decoration: none;
@@ -108,8 +107,11 @@ body {
   color: rgb(235, 211, 161);
 }
 
-.your-govt {
-  padding: 75px 60px;
+.your-govt,
+.laws-props,
+.register,
+.where-when {
+  padding: 60px 60px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   margin-right: 25px;
@@ -121,39 +123,11 @@ body {
   box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
 }
 
-.laws-props {
-  padding: 75px 60px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  margin-right: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  font-size: 18pt;
-  box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
-}
-.register {
-  padding: 75px 60px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  margin-right: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  font-size: 18pt;
-  box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
-}
-.where-when {
-  padding: 75px 60px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  margin-right: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  font-size: 18pt;
-  box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
+.where-when:hover,
+.register:hover,
+.laws-props:hover,
+.your-govt:hover,
+.are-you-registered:hover,
+.watch-button:hover {
+  background: rgb(20, 20, 20);
 }

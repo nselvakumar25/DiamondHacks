@@ -24,13 +24,19 @@ body {
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 3;
-  padding-top: 50px;
+  padding-bottom: 25px;
 }
 .main h3 {
   font-size: 40pt;
+  margin-top: 80px;
 }
-.main p {
-  font-size: 15pt;
+.main p,
+.main li {
+  font-size: 16pt;
+}
+.main b {
+  font-size: 18pt;
+  margin-top: 15px;
 }
 
 .navbar {
