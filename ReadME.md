@@ -18,4 +18,4 @@ This software uses the following APIs (and related):
 
 ## Credits
 
-This project was created during the [Diamondhacks](https://athenahacks.com/) 2024 Hackathon hosted at UCSD on 04/06/2024-04/07/2024.
+This project was created during the [Diamondhacks](acmurl.com/diamondhacks-guide) 2024 Hackathon hosted at UCSD on 04/06/2024-04/07/2024.
