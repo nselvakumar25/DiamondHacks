@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Pirate Polls: Where and When?</title>
-    <link href="where-when-styles.css" rel="stylesheet" />
+    <title>Pirate Polls: Laws and Propositions</title>
+    <link href="laws-props-styles-2.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -20,17 +20,12 @@
         </ul>
       </div>
       <div class="main">
-        <h3>Voting: Where and When?</h3>
+        <h3>Laws and Propositions</h3>
         <p>
-          Arrr, listen up! Every matey has a say in the ship's course. Don't let
-          others decide without ye! Cast yer ballot, set yer course, and let yer
-          voice be heard!
+          There are currently 87 statewide ballot measures certified for the
+          ballot for the upcoming 2024 election! Take a look below!
         </p>
-        <p>
-          Find and reach out to your state or local election office for any help
-          with voting.
-        </p>
-        <p>Select your location how to get started:</p>
+        <p>Select your state to know more:</p>
         <div class="dropdown">
           <label for="state">Select your state:</label>
           <select id="state">
@@ -89,7 +84,7 @@
 
           <label for="county">and Select your county:</label>
           <select id="county"></select>
-          <a href="where-when-2.html" class="enterButton">Enter</a>
+          <a href="laws-props-2.html" class="enterButton">Enter</a>
 
           <script>
             document
@@ -120,19 +115,14 @@
                     console.error("Failed to fetch counties:", error)
                   );
               });
-
-            document
-              .getElementById("selectButton")
-              .addEventListener("click", function () {
-                var selectElement = document.getElementById("state");
-                var selectedState = selectElement.value;
-                console.log("Selected state:", selectedState);
-              });
           </script>
         </div>
       </div>
-      <div class="where-when-image">
-        <img src="Add-ons/where-when-image.png" alt="where when image" />
+      <div class="laws-props-image">
+        <img
+          src="Add-ons/edited-letter-old-paper-scroll.png"
+          alt="laws and propositions image"
+        />
       </div>
     </div>
   </body>
