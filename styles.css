@@ -121,7 +121,7 @@ body {
 .laws-props,
 .register,
 .where-when {
-  padding: 60px 60px;
+  padding: 40px 40px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   margin-right: 25px;
@@ -140,4 +140,13 @@ body {
 .are-you-registered:hover,
 .watch-button:hover {
   background: rgb(20, 20, 20);
+}
+
+.your-govt img,
+.where-when img,
+.register img,
+.laws-props img {
+  width: 30px;
+  height: auto;
+  padding-right: 10px;
 }
