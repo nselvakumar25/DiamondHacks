@@ -1,25 +1,50 @@
-from flask import Flask, jsonify, request
-import requests
+my-react-app/
+├── src/
+│   ├── components/
+│   │   └── Elections.js
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── ...
+    
+import React, { useState, useEffect } from 'react';
 
-app = Flask(__name__)
+const Elections = () => {
+    const [elections, setElections] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-@app.route('/api/elections', methods=['GET'])
-def get_elections():
-    api_key = request.args.get('api_key')
-    base_url = 'https://www.googleapis.com/civicinfo/v2/elections'
-    response = requests.get(base_url, params={'key': api_key})
-    return jsonify(response.json()) if response.status_code == 200 else jsonify({"error": response.status_code}), response.status_code
+    useEffect(() => {
+        fetch('/api/elections')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                setElections(data.elections);
+                setLoading(false);
+            })
+            .catch(error => {
+                setError(error.toString());
+                setLoading(false);
+            });
+    }, []);
 
-@app.route('/api/voterinfo', methods=['GET'])
-def get_voter_info():
-    api_key = request.args.get('api_key')
-    address = request.args.get('address')
-    election_id = request.args.get('electionId', '2000')  # Defaulting to '2000' if not provided
-    base_url = 'https://www.googleapis.com/civicinfo/v2/voterinfo'
-    response = requests.get(base_url, params={'address': address, 'electionId': election_id, 'key': api_key})
-    return jsonify(response.json()) if response.status_code == 200 else jsonify({"error": response.status_code}), response.status_code
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
 
-# Define additional routes for '/representatives' and '/divisions' similarly
+    return (
+        <div>
+            <h1>Upcoming Elections</h1>
+            <ul>
+                {elections.map(election => (
+                    <li key={election.id}>{election.name} - {election.electionDay}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
 
-if __name__ == '__main__':
-    app.run(debug=True)
+export default Elections;
