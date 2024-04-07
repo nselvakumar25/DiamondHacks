@@ -60,3 +60,19 @@ body {
 .navbar li a:hover {
   font-size: larger;
 }
+
+.about-image {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-column-end: 3;
+  float: center;
+}
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1000px;
+  float: center;
+  padding: 30px;
+  padding-top: 100px;
+}
