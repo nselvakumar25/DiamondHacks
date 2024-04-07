@@ -74,3 +74,40 @@ body {
   font-size: larger;
   color: rgb(192, 164, 105);
 }
+
+.collapsible {
+  background-color: rgb(0, 0, 0);
+  color: rgb(235, 211, 161);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 2px solid rgb(235, 211, 161);
+  border-radius: 5px;
+  margin-bottom: 50px;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(0, 0, 0);
+}
+.content p {
+  margin-top: 0;
+  color: rgb(235, 211, 161);
+}
+.content ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style-type: none;
+  padding-left: 20px;
+}
