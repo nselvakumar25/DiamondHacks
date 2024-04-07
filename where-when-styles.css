@@ -86,3 +86,22 @@ body {
   padding-top: 50px;
   border-radius: 40px;
 }
+
+.dropdown {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-top: 10px;
+  font-size: 15pt;
+  padding-right: 20px;
+}
+
+.dropdown select {
+  background-color: white;
+  color: rgb(51, 20, 20);
+  border: none;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+}
