@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  color: rgb(235, 211, 161);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr 100px;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.main {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-bottom: 25px;
+}
+.main h3 {
+  font-size: 40pt;
+  margin-top: 140px;
+}
+.main p {
+  font-size: 18pt;
+  margin-bottom: 50px;
+}
+
+.navbar {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  list-style: none;
+  align-items: center;
+  float: right;
+}
+.navbar li {
+  position: relative;
+  float: left;
+}
+.navbar li a {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  color: rgb(235, 211, 161);
+  font-size: 15pt;
+}
+.navbar li a:hover {
+  font-size: larger;
+}
+
+.home-image {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-column-end: 3;
+  float: center;
+}
+.home-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1000px;
+  float: center;
+  padding: 30px;
+}
+.are-you-registered {
+  padding: 14px 30px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  color: rgb(235, 211, 161);
+  margin-right: 25px;
+}
+.watch-button {
+  padding: 14px 30px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  color: rgb(235, 211, 161);
+}
+
+.link-boxes {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  display: flex;
+  justify-content: space-around;
+}
+.link-boxes a {
+  text-decoration: none;
+  color: rgb(235, 211, 161);
+}
+
+.your-govt,
+.laws-props,
+.register,
+.where-when {
+  padding: 60px 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 18pt;
+  box-shadow: 0 0 25px rgba(80, 78, 78, 0.5);
+}
+
+.where-when:hover,
+.register:hover,
+.laws-props:hover,
+.your-govt:hover,
+.are-you-registered:hover,
+.watch-button:hover {
+  background: rgb(20, 20, 20);
+}
