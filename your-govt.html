@@ -1,85 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-color: rgb(0, 0, 0); 
+  color: rgb(235, 211, 161); 
+}
 
-    <title>Pirate Polls: Your Government</title>
-    <link href="your-govt-styles.css" rel="stylesheet" />
-  </head>
+.collapsible {
+  background-color: rgb(0, 0, 0);
+  color: rgb(235, 211, 161); 
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 2px solid rgb(235, 211, 161); 
+  border-radius: 5px;
+  margin-bottom: 10px; 
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
-  <body>
-    <div class="container">
-      <div class="header">
-        <h2><a href="index.html">Pirate Polls</a></h2>
-      </div>
-      <div class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
-      </div>
-      <div class="main">
-        <h3>Your Government</h3>
-        <p>
-          The U.S. divides your government into three branches to ensure power
-          distribution. The three branches include: Legislative, Executive, and
-          Judicial.
-        </p>
-        <b>Legislative Branch</b>
-        <p>
-          The Legislative Branch is made up of two houses in Congress: Senate
-          and House of Representatives.
-        </p>
-        <li>
-          Senate: Represents citizens on an equal state basis, thus 2
-          representatives each state
-        </li>
-        <li>House of Representatives: Based on district populations</li>
-        <p>Key Roles:</p>
-        <li>Proposing and passing laws</li>
-        <li>
-          Confirming or denying nominations for federal agencies, judges, and
-          supreme court
-        </li>
-        <li>Can declare war</li>
-        <p></p>
-        <b>Executive Branch</b>
-        <p>
-          The Executive Branch is made up of the President, Vice President, and
-          the Cabinet.
-        </p>
-        <li>
-          President: Makes treaties, vetoes or signs bills, represents foreign
-          affairs, enforces laws, commander in chief in war, nominates
-          representatives in cabinet, supreme court, and other officials
-        </li>
-        <li>
-          Vice President: Can act in place of President, supports and governs
-        </li>
-        <li>The Cabinet: Advisors to the President</li>
-        <p>Key Roles:</p>
-        <li>Enforces and executes laws</li>
-        <li>Manages daily operations of government</li>
-        <li>
-          Carries out functions of Department of Defense, Justice, and
-          Environmental Protection Agency
-        </li>
-        <p></p>
-        <b>Judicial Branch</b>
-        <p>The Judicial Branch primarily consists of the courts and judges.</p>
-        <li>
-          Courts: Headed by the court system, with the highest court typically
-          being the Supreme Court
-        </li>
-        <li>
-          Judges: Appointed by the Executive branch, responsible for presiding
-          over trials and maintaining order
-        </li>
-        <p>Key Roles:</p>
-        <li>Interpreting the laws and ensuring it is fair</li>
-        <li>Resolving any disputes and protecting individual rights</li>
-      </div>
-    </div>
-  </body>
+.active, .collapsible:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(0, 0, 0);
+}
+.content p {
+  margin-top: 0;
+  color: rgb(235, 211, 161); 
+}
+.content ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style-type: none;
+  padding-left: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2 style="color:rgb(235, 211, 161)">Your Government</h2> 
+
+<p>The U.S. divides your government into three branches to ensure power distribution.</p>
+<p>The three branches include: Legislative, Executive, and Judicial.</p>
+
+<button class="collapsible">Legislative</button>
+<div class="content">
+  <p>The Legislative Branch is made up of two houses in Congress: Senate and House of Representatives.</p>
+  <ul>
+    <li>* Senate: Represents citizens on an equal state basis, thus 2 representatives each state</li>
+    <li>* House of Representatives: Based on district populations</li>
+  </ul>
+  <p>Key Roles:</p>
+  <ul>
+    <li>* Proposing and passing laws</li>
+    <li>* Confirming or denying nominations for federal agencies, judges, and supreme court</li>
+    <li>* Can declare war</li>
+  </ul>
+</div>
+
+<button class="collapsible">Executive</button>
+<div class="content">
+  <p>The Executive Branch is made up of the President, Vice President, and the Cabinet.</p>
+  <ul>
+    <li>* President: Makes treaties, vetoes or signs bills, represents foreign affairs, enforces laws, commander in chief in war, nominates representatives in cabinet, supreme court, and other officials</li>
+    <li>* Vice President: Can act in place of President, supports and governs</li>
+    <li>* The Cabinet: Advisors to the President</li>
+  </ul>
+
+  <p>Key Roles:</p>
+  <ul>
+    <li>* Enforces and executes laws</li>
+    <li>* Manages daily operations of government</li>
+    <li>* Carries out functions of Department of Defense, Justice, and Environmental Protection Agency</li>
+  </ul>
+</div>
+
+<button class="collapsible">Judicial</button>
+<div class="content">
+  <p>The Judicial Branch primarily consists of the courts and judges.</p>
+  <ul>
+    <li>* Courts: Headed by the court system, with the highest court typically being the Supreme Court</li>
+    <li>* Judges: Appointed by the Executive branch, responsible for presiding over trials and maintaining order</li>
+  </ul>
+  <p>Key Roles:</p>
+  <ul>
+    <li>* Interpreting the laws and ensuring it is fair</li>
+    <li>* Resolving any disputes and protecting individual rights</li>
+  </ul>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
 </html>
